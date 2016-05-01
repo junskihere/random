@@ -1,0 +1,26 @@
+{
+  "name": "meteor-react",
+  "version": "1.0.0",
+  "description": "This is an example of a Meteor + React",
+  "main": "main.js",
+  "scripts": {
+    "start": "meteor",
+    "shell": "meteor shell"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ethaan/playground/tree/master/react"
+  },
+  "keywords": [
+    "react",
+    "meteor"
+  ],
+  "author": "ethaan",
+  "license": "MIT",
+  "dependencies": {
+    "react": "0.14.7",
+    "react-dom": "0.14.7",
+    "react-komposer": "^1.8.0",
+    "react-mounter": "1.1.0"
+  }
+}
