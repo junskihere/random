@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default Navbar = () =>(
+export default Navbar = () => (
   <nav className="light-blue lighten-1" role="navigation">
     <div className="nav-wrapper container"><a id="logo-container" href="#" className="brand-logo">Logo</a>
       <ul className="right hide-on-med-and-down">
@@ -13,4 +13,20 @@ export default Navbar = () =>(
       <a href="#" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></a>
     </div>
   </nav>
+);
+
+export const SideNavbar = () => (
+
+  <nav>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#!">First Sidebar Link</a></li>
+      <li><a href="#!">Second Sidebar Link</a></li>
+    </ul>
+    <ul id="slide-out" class="side-nav">
+      <li><a href="#!">First Sidebar Link</a></li>
+      <li><a href="#!">Second Sidebar Link</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  </nav>
+
 );
