@@ -50,6 +50,7 @@ FlowRouter.route("/sidebarsample2", {
       content: <PostList />,
       footer: <Footer />
     });
+    $(".dropdown-button").dropdown();
   }
 });
 
@@ -61,5 +62,6 @@ FlowRouter.route("/sidebarsample3", {
       content: <PostList />,
       footer: <Footer />
     });
+    $(".button-collapse").sideNav();
   }
 });

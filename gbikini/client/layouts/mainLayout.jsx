@@ -2,7 +2,9 @@ import React from 'react';
 
 export const MainLayout = ({header, content, footer}) => {
 
-    return (<div>
+    return (
+
+    <div>
       {header}
       <div className="container">
         {content}

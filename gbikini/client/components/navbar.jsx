@@ -26,16 +26,16 @@ export const SideNavbar = () => (
       <li><a href="#!">First Sidebar Link</a></li>
       <li><a href="#!">Second Sidebar Link</a></li>
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i className="mdi-navigation-menu"></i></a>
   </nav>
 
 );
 
 const  DropdownCount = () => (
-  <ul id="dropdown1" class="dropdown-content">
+  <ul id="dropdown1" className="dropdown-content">
     <li><a href="#!">one</a></li>
     <li><a href="#!">two</a></li>
-    <li class="divider"></li>
+    <li className="divider"></li>
     <li><a href="#!">three</a></li>
   </ul>
 );
@@ -46,13 +46,13 @@ export const DropdownNavbar = () => (
   <div>
   <DropdownCount />
   <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
+    <div className="nav-wrapper">
+      <a href="#!" className="brand-logo">Logo</a>
+      <ul className="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
         <li><a href="badges.html">Components</a></li>
 
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a className="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i className="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
   </nav>
