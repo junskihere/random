@@ -57,11 +57,12 @@ FlowRouter.route("/sidebarsample2", {
 
 FlowRouter.route("/sidebarsample3", {
   action () {
+     $(".button-collapse").sideNav();
     mount(MainLayout, {
       header: <Mobilecollapse />,
       content: <PostList />,
       footer: <Footer />
     });
-    $(".button-collapse").sideNav();
+
   }
 });
