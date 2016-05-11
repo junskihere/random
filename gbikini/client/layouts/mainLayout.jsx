@@ -10,6 +10,7 @@ export const MainLayout = ({header, content, footer}) => {
         {content}
       </div>
       {footer}
-    </div>);
+    </div>
+);
 
 };

@@ -6,7 +6,7 @@ export default Content = ({name}) => (
     <div className="container">
       <br/><br/>
       <div className="row center">
-        <h5 className="header col s12 light">Go and check our <a href="/routes">Posts Page</a> </h5>
+        <h5 className="header col s12 light">Go and check our <a href="/routes">Posts Page</a></h5>
       </div>
       <br/><br/>
     </div>
