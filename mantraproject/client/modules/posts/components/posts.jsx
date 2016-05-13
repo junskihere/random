@@ -20,10 +20,7 @@ class Posts extends React.Component{
       <div className="row">
               <PostLists posts={posts} />
         </div>
-
-
             <AddPostButton />
-
       </div>
     );
   }
@@ -34,9 +31,9 @@ const PostLists  = ({posts}) => (
 
   <ul className="collapsible collection  popout" data-collapsible="accordion">
         {posts.map( post  => (
-        <li className="collection-item avatar red lighten-2">
+        <li className="collection-item avatar red lighten-2" key={post._id}>
          <img src="https://materiell.com/wp-content/uploads/2015/03/john-small.png" alt="" className="circle " />
-          <div className="collapsible-header red lighten-2">{post.title}</div>
+          <div className="collapsible-header red lighten-2"><h5>{post.title}</h5></div>
           <div className="collapsible-body "><p>{post.body}</p></div>
         </li>
         ))

@@ -2,19 +2,22 @@ const {describe, it} = global;
 import {expect} from 'chai';
 import {stub, spy} from 'sinon';
 import {composer} from '../posts';
+import {Class} from 'meteor/jagi:astronomy';
+
 
 describe('posts.containers.posts', () => {
   describe('composer', () => {
 
-//    const Tracker = {nonreactive: cb => cb()};
-//    const getCollections = (post) => {
-//      const Collections = {
-//        Posts: {findOne: stub()}
-//      };
-//      Collections.Posts.findOne.returns(post);
-//      return Collections;
-//    };
+        it('should subscribe to posts', () => {
+          const Meteor = {subscribe: stub()};
+          Meteor.subscribe.returns({ready: () => false});
 
-    it('should do something');
+          const context = () => ({Meteor});
+          const onData = spy();
+
+          composer({context}, onData);
+          expect(Meteor.subscribe.args[0]).to.deep.equal([
+            'posts'
+          ]);
   });
 });
