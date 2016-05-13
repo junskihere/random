@@ -23,7 +23,7 @@ const User = Class.create({
                     return user;
                 });
 
-                const user =  Accounts.createUser({
+              Accounts.createUser({
                     firstname : e.currentTarget.firstname,
                     lastname : e.currentTarget.lastname,
                     email : e.currentTarget.email,
