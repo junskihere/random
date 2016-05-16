@@ -13,11 +13,12 @@ class Posts extends React.Component{
   render() {
     const {posts} = this.props;
     return(
-      <div>
+      <div className="container">
       <div className="row">
-        <div className="card-panel  blue-grey lighten-5 valign center"><h4>Posts</h4></div>
+        <div className="card-panel  blue-grey lighten-5 valign center z-depth-4"><h4>List of Posts</h4></div>
       </div>
-      <div className="row">
+      <div className="row  z-depth-4">
+
               <PostLists posts={posts} />
         </div>
             <AddPostButton />
@@ -27,9 +28,9 @@ class Posts extends React.Component{
 }
 
 
-const PostLists  = ({posts}) => (
+ const PostLists  = ({posts}) => (
 
-  <ul className="collapsible collection  popout" data-collapsible="accordion">
+  <ul className="collapsible collection  popout " data-collapsible="accordion">
         {posts.map( post  => (
         <li className="collection-item avatar red lighten-2" key={post._id}>
          <img src="https://materiell.com/wp-content/uploads/2015/03/john-small.png" alt="" className="circle " />
@@ -43,4 +44,4 @@ const PostLists  = ({posts}) => (
 
 
 
-export default Posts ;
+export default Posts;

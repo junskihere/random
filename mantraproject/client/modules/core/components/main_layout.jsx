@@ -5,11 +5,7 @@ const Layout = ({content = () => null }) => (
   <div>
     <NavBar />
       <main>
-    <div className="container">
-
       {content()}
-
-    </div>
     </main>
 
   </div>

@@ -1,17 +1,17 @@
 import React from 'react';
 import {mount} from 'react-mounter';
+import Auth from '/client/modules/auth/containers/auth.js';
 import MainLayout from './components/main_layout.jsx';
-import Home from './components/home.jsx';
+import Home from './containers/home.js';
 
 export default function (injectDeps, {FlowRouter}) {
-  const MainLayoutCtx = injectDeps(MainLayout);
+  const AuthCheck = injectDeps(Auth);
 
   FlowRouter.route('/', {
     name: 'home',
     action() {
-
-      mount(MainLayoutCtx, {
-        content: () => (<Home />)
+      mount(AuthCheck, {
+        MainLayout,  content: () => (<Home />)
       });
 
     }

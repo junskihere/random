@@ -5,7 +5,7 @@ class AddPost extends React.Component{
   render() {
     const error= this.props;
     return (
-      <div>
+      <div className="container">
         <div className="row">
           <div className="card-panel  blue-grey lighten-5 valign center"><h4>Add new post</h4></div>
         </div>

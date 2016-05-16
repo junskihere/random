@@ -25,7 +25,7 @@ class NavBar extends React.Component {
   render() {
     return (
         <nav>
-            <div className="nav-wrapper">
+            <div className="nav-wrapper blue darken-3">
                 <a href="/" className="brand-logo">Juns-Kis Mantra</a>
                 <a href="#" data-activates="mobile-demo" className="button-collapse">
                     <i className="material-icons">menu</i>
@@ -48,7 +48,7 @@ class NavBar extends React.Component {
                         <a href="#">Sige nalang</a>
                     </li>
                 </ul>
-                <ul className="side-nav" id="mobile-demo">
+                <ul className="side-nav light-blue lighten-5" id="mobile-demo">
                     <li>
                         <a  className="posts-dropdown-mobile" data-activates='postsDropdown2' href="#">Posts</a>
                           <ul id='postsDropdown2' className='dropdown-content'>

@@ -1,7 +1,7 @@
-import posts from './posts';
-import users from './users';
+import Post from './posts';
+import User from './users';
 
 export default function () {
-  posts();
-  users();
+  Post();
+  User();
 }

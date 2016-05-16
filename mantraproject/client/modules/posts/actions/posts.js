@@ -7,7 +7,7 @@ export default {
     post.body = formData.body;
     post.user_id = Meteor.uuid();
     post.createdAt = new Date();
-    post.save((err,result)=>{
+    post.save((err)=>{
       if(err){
         const errors = err.details[0];
         return LocalState.set(errors.name,errors.message);

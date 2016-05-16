@@ -1,9 +1,20 @@
 import React from 'react';
 
-const Auth = () => (
-  <div>
-    Auth
-  </div>
-);
+class Auth extends React.Component{
+    render() {
+      const {MainLayout, content, userId} = this.props
+      const DisplayContent = () => (
+          <div>
+            <MainLayout  content={content}/>
+          </div>
+      );
+        if(!userId){
+            FlowRouter.go("/register");
+        }
+        return(
+            DisplayContent()
+        );
 
+    }
+}
 export default Auth;
