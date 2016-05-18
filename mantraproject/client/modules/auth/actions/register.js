@@ -9,12 +9,15 @@ export default {
     if(err && err.message != "Operation prevented [prevented]"){
       return LocalState.set('SAVING_ERROR', err.message);
     }
-     Meteor.loginWithPassword(formData.email, formData.password);
+     Meteor.loginWithPassword(formData.email, formData.password,(err)=>{
+       if(err){
+         return LocalState.set('SAVING_ERROR', err.message);
+       }
+       FlowRouter.go('/');
+     });
   });
 
-  if(Meteor.user()){
-    FlowRouter.go('/');
-  }
+
 
  //  const user = new User();
  //  user.firstname = formData.firstName;

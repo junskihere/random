@@ -31,7 +31,7 @@ const User = Class.create({
               Accounts.createUser({
                     firstname : e.currentTarget.firstname,
                     lastname : e.currentTarget.lastname,
-                    emails : e.currentTarget.emails,
+                    email : e.currentTarget.email,
                     password : e.currentTarget.password,
                     createdAt : new Date(),
                 });

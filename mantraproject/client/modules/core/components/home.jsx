@@ -6,10 +6,9 @@ class Home extends React.Component {
      $('.parallax').parallax();
   }
   render() {
-    const {posts} = this.props;
     return (
       <div>
-      <div className="parallax-container" style={{height:"120px"}}>
+      <div className="parallax-container" style={{height:"150px"}}>
         <div className="parallax"><img src="/img/cloud-home.jpg" /></div>
 
       </div>
@@ -19,8 +18,8 @@ class Home extends React.Component {
           <p className="grey-text text-darken-3 lighten-3">Welcome to justskis mantra where all the mantra is..<a href="/posts">start browsing matras</a> .</p>
         </div>
       </div>
-        <div className="parallax-container">
-          <div className="parallax"><img src="/img/cloud-home.jpg" / ></div>
+        <div className="parallax-container"  style={{height:"900px"}}>
+          <div className="parallax"><img src="/img/bg_6.jpg" / ></div>
         </div>
         </div>
     );

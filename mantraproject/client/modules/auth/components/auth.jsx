@@ -9,7 +9,7 @@ class Auth extends React.Component{
           </div>
       );
         if(!userId){
-            FlowRouter.go("/register");
+            FlowRouter.go("/");
         }
         return(
             DisplayContent()

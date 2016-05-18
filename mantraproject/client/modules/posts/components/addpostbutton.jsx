@@ -6,8 +6,8 @@ class AddPostButton extends React.Component{
     }
     render() {
       return (
-          <div className="fixed-action-btn" style={{bottom:'45px', right:'24px'}}>
-            <a className="btn-floating btn-large red" href="/addpost">
+          <div className="fixed-action-btn  " style={{bottom:'45px', right:'24px'}}>
+            <a className="btn-floating btn-large red blue darken-3" href="/addpost">
                 <i className="large material-icons">mode_edit</i>
             </a>
          </div>

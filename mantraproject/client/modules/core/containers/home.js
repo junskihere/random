@@ -4,10 +4,7 @@ import Home from '../components/home.jsx';
 
 export const composer = ({context}, onData) => {
   const {Meteor, Collections} = context();
-  if(Meteor.subscribe('posts').ready()) {
-    const posts = Post.find();
-    onData(null,{posts});
-  }
+  onData(null,{});
   return;
 };
 

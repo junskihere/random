@@ -4,7 +4,11 @@ import {mount} from 'react-mounter';
 import MainLayout from '/client/modules/core/components/main_layout.jsx';
 import Posts from './containers/posts.js';
 import AddPost from './containers/addpost.js';
+import ViewPost from './containers/viewpost.js';
+
+import Auth from '/client/modules/auth/containers/auth.js';
 export default function (injectDeps, {FlowRouter}) {
+  const AuthCheck = injectDeps(Auth);
   const MainLayoutCtx = injectDeps(MainLayout);
 
   FlowRouter.route('/posts', {
@@ -19,18 +23,26 @@ export default function (injectDeps, {FlowRouter}) {
   FlowRouter.route('/addpost', {
     name: 'addposts',
     action() {
-      mount(MainLayoutCtx, {
-        content: () => (<AddPost />)
+      mount(AuthCheck, {
+        MainLayout, content: () => (<AddPost />)
       });
     }
   });
 
+  FlowRouter.route('/viewpost/:postId', {
+    name: 'viewpost',
+    action({postId}) {
+      mount(AuthCheck, {
+        MainLayout, content: () => (<ViewPost postId={postId} />)
+      });
+    }
+  });
 
   FlowRouter.route('/editporst', {
     name: 'editposts',
     action() {
-      mount(MainLayoutCtx, {
-        content: () => (<AddPost />)
+      mount(AuthCheck, {
+        MainLayout, content: () => (<AddPost />)
       });
     }
   });
@@ -38,8 +50,8 @@ export default function (injectDeps, {FlowRouter}) {
   FlowRouter.route('/removepost', {
     name: 'removeposts',
     action() {
-      mount(MainLayoutCtx, {
-        content: () => (<AddPost />)
+      mount(AuthCheck, {
+      MainLayout,  content: () => (<AddPost />)
       });
     }
   });

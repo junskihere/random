@@ -8,7 +8,7 @@ export default function () {
     return Post.find();
   });
 
-  Meteor.publish('posts.view', function (postId) {
-    return Post.find(postId);
+  Meteor.publish('post.view', function (postId) {
+    return Post.find({_id:postId});
   });
 }
