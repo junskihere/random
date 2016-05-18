@@ -35,7 +35,7 @@ class Posts extends React.Component{
         <li className="collection-item avatar  blue darken-3" key={post._id}>
          <img src="https://materiell.com/wp-content/uploads/2015/03/john-small.png" alt="" className="circle " />
           <div className="collapsible-header  blue darken-3"><h5>{post.title}</h5></div>
-          <div className="collapsible-body "><p>{post.body}<br /><br /><br /><a  className="right" href={"/viewpost/"+post._id}>view</a></p></div>
+          <div className="collapsible-body "><p className="truncate">{post.body}<br /><br /><br /><a  className="right" href={"/viewpost/"+post._id}>view</a></p></div>
         </li>
         ))
     }

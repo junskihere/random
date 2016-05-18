@@ -51,9 +51,9 @@ class AddPost extends React.Component{
       title : title.value,
       body : body.value,
     };
-    console.log(image.files[0]);
+  //  console.log(image.files[0]);
 
-    //create(data);
+    create(data);
   }
 
   resetError(event){

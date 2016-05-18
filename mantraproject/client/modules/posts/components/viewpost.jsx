@@ -10,10 +10,11 @@ const Viewpost = ({post}) => (
               <h1>{post.title}</h1>
             </div>
 
-            <div className="row center">
-              <p>{post.body}</p>
+            <div className="row valign">
+              <p className="justify">{post.body}</p>
             </div>
         </div>
+        
         :
 
         <div className="row center">
