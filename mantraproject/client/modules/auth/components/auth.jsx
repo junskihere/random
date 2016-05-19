@@ -2,13 +2,13 @@ import React from 'react';
 
 class Auth extends React.Component{
     render() {
-      const {MainLayout, content, userId} = this.props
+      const {MainLayout, content, userId, userSubReady} = this.props
       const DisplayContent = () => (
           <div>
             <MainLayout  content={content}/>
           </div>
       );
-        if(!userId){
+        if(userSubReady && !userId){
             FlowRouter.go("/");
         }
         return(
