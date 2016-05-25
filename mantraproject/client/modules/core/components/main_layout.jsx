@@ -1,14 +1,24 @@
 import React from 'react';
 import NavBar from './Navbar/top.jsx';
-import Footer from './Navbar/footer.jsx';
-const Layout = ({content = () => null }) => (
-  <div>
-    <NavBar />
-      <main>
-      {content()}
-    </main>
+//import Footer from './Navbar/footer.jsx';
 
-  </div>
-);
+
+class Layout extends React.Component {
+  render() {
+      const {content} = this.props;
+
+      return(
+        <div>
+          <NavBar />
+            <main>
+            {content()}
+          </main>
+
+        </div>
+      );
+  }
+}
+
+
 
 export default Layout;

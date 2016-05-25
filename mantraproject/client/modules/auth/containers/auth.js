@@ -3,7 +3,7 @@ import {useDeps, composeAll, composeWithTracker, compose} from 'mantra-core';
 import Auth from '../components/auth.jsx';
 
 export const composer = ({context}, onData) => {
-  const {Meteor, Collections, LocalState, authCommon} = context();
+  const { authCommon } = context();
 
   const { userSubReady,  userId, user, profile} = authCommon();
 
@@ -11,17 +11,24 @@ export const composer = ({context}, onData) => {
     const data = {
       userId,
       user,
-      profile
+      profile,
     };
 
     onData(null, data);
 
-  }
+  }  else {
+
+      const waitingForAuthData = true;
+      const data = {
+        waitingForAuthData,
+      };
+      onData(null, data);
+    }
 
 };
 
-export const depsMapper = (context, actions) => ({
-  context: () => context
+export const depsMapper = (context) => ({
+  context: () => context,
 });
 
 export default composeAll(

@@ -4,7 +4,7 @@
   "description": "mantraproject",
   "scripts": {
     "test": "mocha  client/**/tests/**/*.js --compilers js:babel-core/register",
-    "storybook": "start-storybook -p 9001"
+    "storybook": "start-storybook -p 9001",
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+
+
 const Viewpost = ({post}) => (
   <div className="container">
       <div className="cols s12 ">
@@ -14,7 +17,7 @@ const Viewpost = ({post}) => (
               <p className="justify">{post.body}</p>
             </div>
         </div>
-        
+
         :
 
         <div className="row center">

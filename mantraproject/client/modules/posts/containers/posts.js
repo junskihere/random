@@ -7,8 +7,15 @@ export const composer = ({context}, onData) => {
   if(Meteor.subscribe('posts').ready()) {
     const posts = Post.find();
     onData(null,{posts});
-  }
-  return;
+  } else {
+
+      const waitingForSubscriptions = true;
+      const data = {
+        waitingForSubscriptions,
+      };
+      onData(null, data);
+    }
+
 };
 
 export const depsMapper = (context, actions) => ({
