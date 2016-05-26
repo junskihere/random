@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 class AddPost extends React.Component{
 
   render() {
@@ -50,6 +52,7 @@ class AddPost extends React.Component{
     const data = {
       title : title.value,
       body : body.value,
+      image : image.files,
     };
   //  console.log(image.files[0]);
 

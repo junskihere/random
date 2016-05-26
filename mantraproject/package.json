@@ -1,19 +1,15 @@
 {
-  "name": "mantraproject",
-  "version": "0.1.0",
-  "description": "mantraproject",
-  "scripts": {
-    "test": "mocha  client/**/tests/**/*.js --compilers js:babel-core/register",
-    "storybook": "start-storybook -p 9001",
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/username/reponame.git"
-  },
-  "author": "",
+  "name": "Gbikini",
+  "version": "0.0.1",
+  "description": "G bikini projects",
+  "repository": {},
+  "author": "junskihere",
   "license": "ISC",
   "dependencies": {
+    "cloudinary": "^1.3.1",
+    "datauri": "^1.0.4",
     "mantra-core": "^1.6.1",
+    "meteor-node-stubs": "^0.2.3",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-komposer": "^1.3.0",

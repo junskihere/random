@@ -17,7 +17,7 @@ app.loadModule(coreModule);
 app.loadModule(postsModule);
 app.loadModule(authModule);
 app.loadModule(commentsModule);
-app.init(); 
+app.init();
 
 
 

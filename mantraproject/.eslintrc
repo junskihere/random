@@ -39,7 +39,7 @@
       }
     ],
     "require-jsdoc": 0,
-    "complexity": [2, 4],
+    "complexity": [2, 10],
     "valid-jsdoc": 0,
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2

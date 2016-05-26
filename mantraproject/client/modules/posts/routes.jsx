@@ -9,13 +9,13 @@ import LoadingPage from '../core/components/loading_page.jsx';
 import Auth from '/client/modules/auth/containers/auth.js';
 export default function (injectDeps, {FlowRouter}) {
   const AuthCheck = injectDeps(Auth);
-//const MainLayoutCtx = injectDeps(MainLayout);
+const MainLayoutCtx = injectDeps(MainLayout);
 
   FlowRouter.route('/posts', {
     name: 'posts',
     action() {
-      mount(AuthCheck, {
-        MainLayout, content: () => (<Posts  loadingpage={LoadingPage}/>),
+      mount( MainLayoutCtx,{
+         content: () => (<Posts  loadingpage={LoadingPage}/>),
       });
     },
   });
