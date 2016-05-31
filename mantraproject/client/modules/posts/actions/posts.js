@@ -13,8 +13,8 @@ export default {
 
     var reader = new FileReader(); //create a reader according to HTML5 File API
 
-    reader.onload = function(e){
-    
+    reader.onload = ()=>{
+
 
       var buffer = new Uint8Array(reader.result) ;// convert to binary
       Meteor.call("get_cloudy_config",buffer,(err)=> {
@@ -24,7 +24,16 @@ export default {
         console.log("done");
 
       });
+
+
     }
+
+    // reader.onprogress = (data)=>{
+    //   if(data.lengthComputable){
+    //     var progress = parseInt(((data.loaded / data.total)*100),10);
+    //     console.log(progress);
+    //   }
+    // }
 
     reader.readAsArrayBuffer(file); //read the file as arraybuffer
 

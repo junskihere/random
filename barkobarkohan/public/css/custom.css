@@ -1,0 +1,44 @@
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+
+
+  /* label focus color */
+  .input-field input[type]:focus + label {
+    color: #2196F3;
+  }
+  /* label underline focus color */
+  .input-field input[type]:focus {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #1565C0;
+  }
+  /* valid color */
+  .input-field input[type].valid {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #1565C0;
+  }
+
+  /* label focus color */
+  .input-field textarea[class]:focus + label {
+    color: #2196F3;
+  }
+  /* label underline focus color */
+  .input-field textarea[class]:focus {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #1565C0;
+  }
+  /* valid color */
+  .input-field textarea[class].valid {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #1565C0;
+  }
+
+.justify {
+  text-align: justify !important;
+}
