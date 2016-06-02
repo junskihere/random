@@ -5,7 +5,7 @@ class NavBar extends React.Component {
     $(".button-collapse").sideNav({
       menuWidth: 150, // Default is 240
       edge: 'right', // Choose the horizontal origin
-      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
     });
     $('.posts-dropdown').dropdown({
      inDuration: 300,
@@ -14,7 +14,7 @@ class NavBar extends React.Component {
      hover: false, // Activate on hover
      gutter: 0, // Spacing from edge
      belowOrigin: true, // Displays dropdown below the button
-     alignment: 'left' // Displays dropdown with edge aligned to the left of button
+     alignment: 'left', // Displays dropdown with edge aligned to the left of button
    });
    $('.posts-dropdown-mobile').dropdown({
     inDuration: 300,
@@ -23,10 +23,11 @@ class NavBar extends React.Component {
     hover: false, // Activate on hover
     gutter: 0, // Spacing from edge
     belowOrigin: true, // Displays dropdown below the button
-    alignment: 'right' // Displays dropdown with edge aligned to the left of button
+    alignment: 'right', // Displays dropdown with edge aligned to the left of button
   });
   }
   render() {
+    const {Meteor} = this.props;
     return (
         <nav>
             <div className="nav-wrapper blue darken-3">
@@ -66,10 +67,9 @@ class NavBar extends React.Component {
     if(e && e.preventDefault){
       e.preventDefault();
     }
-
-
+    const {Meteor} = this.props;
     Meteor.logout();
-    FlowRouter.go("/login");
+
   }
 }
 

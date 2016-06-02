@@ -3,7 +3,7 @@ import {useDeps, composeAll, composeWithTracker, compose} from 'mantra-core';
 import Auth from '../components/auth.jsx';
 
 export const composer = ({context}, onData) => {
-  const { authCommon } = context();
+  const { authCommon, Meteor } = context();
 
   const { userSubReady,  userId, user, profile} = authCommon();
 
@@ -12,6 +12,7 @@ export const composer = ({context}, onData) => {
       userId,
       user,
       profile,
+      Meteor,
     };
 
     onData(null, data);

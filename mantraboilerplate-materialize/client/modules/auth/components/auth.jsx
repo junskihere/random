@@ -2,7 +2,7 @@ import React from 'react';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 class Auth extends React.Component{
     render() {
-      const {MainLayout, content, userId} = this.props
+      const {MainLayout, content, userId, Meteor} = this.props
       const { waitingForAuthData } = this.props;
 
       if(waitingForAuthData){
@@ -19,7 +19,7 @@ class Auth extends React.Component{
         }
         return(
             <div>
-              <MainLayout  content={content}/>
+              <MainLayout  content={content} Meteor={Meteor}/>
             </div>
         );
 

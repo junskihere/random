@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'react-mounter';
 
-import MainLayout from '/client/modules/core/components/main_layout.jsx';
+import MainLayout from '/client/modules/core/containers/main_layout.js';
 import Posts from './containers/posts.js';
 import AddPost from './containers/addpost.js';
 import ViewPost from './containers/viewpost.js';
