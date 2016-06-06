@@ -8,6 +8,7 @@ import authModule from './modules/auth';
 import commentsModule from './modules/comments';
 
 
+
 // init context
 const context = initContext();
 
@@ -17,6 +18,7 @@ app.loadModule(coreModule);
 app.loadModule(postsModule);
 app.loadModule(authModule);
 app.loadModule(commentsModule);
+
 app.init();
 
 
